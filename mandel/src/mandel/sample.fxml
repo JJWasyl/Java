@@ -1,0 +1,24 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.TextField?>
+
+<GridPane fx:controller="mandel.MandelFractal"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" stylesheets="/mandel/main.css">
+    <Canvas fx:id="canvas" GridPane.columnIndex="0" GridPane.rowSpan="8" width="900" height="600" layoutX="25" layoutY="25"
+            onMouseDragged="#mouseMoves" onMousePressed="#mousePressed" onMouseReleased="#mouseReleased"/>
+    <TextField id="Width" fx:id="Width" GridPane.columnIndex="1" GridPane.rowIndex="1" opacity="0.82" style="-fx-background-radius: 100;"
+               promptText="WIDTH" minWidth="100"/>
+    <TextField id="Height" fx:id="Height" GridPane.columnIndex="1" GridPane.rowIndex="2" opacity="0.82" style="-fx-background-radius: 100;"
+               promptText="HEIGHT" minWidth="100" />
+    <TextField id="Real" fx:id="Real" GridPane.columnIndex="1" GridPane.rowIndex="3" opacity="0.82" style="-fx-background-radius: 100;"
+               promptText="MAX REAL" minWidth="100" />
+    <TextField id="Imaginary" fx:id="Imaginary" GridPane.columnIndex="1" GridPane.rowIndex="4" opacity="0.82" style="-fx-background-radius: 100;"
+               promptText="MAX IMG" minWidth="100" />
+    <TextField id="Precision" fx:id="Precision" GridPane.columnIndex="1" GridPane.rowIndex="5" opacity="0.82" style="-fx-background-radius: 100;"
+               promptText="PRECISION" minWidth="100" />
+    <Button GridPane.columnIndex="1" GridPane.rowIndex="0" text="Clear" onAction="#clearCanvas" minWidth="100"/>
+    <Button GridPane.columnIndex="1" GridPane.rowIndex="6" text="Draw" onAction="#drawMand" minWidth="100"/>
+</GridPane>
